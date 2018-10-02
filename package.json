@@ -1,11 +1,11 @@
 {
   "name": "fiorsaoirse-brain-games-project",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "brain games hexlet project",
   "main": "",
   "bin": {
-     "brain-games": "dist/bin/brain-games.js"
-   },
+    "brain-games": "dist/index.js"
+  },
   "files": [
     "dist"
   ],
@@ -30,5 +30,8 @@
     "@babel/core": "^7.1.2",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.1.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.9"
   }
 }
