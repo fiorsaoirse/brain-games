@@ -1,8 +1,8 @@
 {
   "name": "fiorsaoirse-brain-games-project",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "brain games hexlet project",
+  "main": "",
   "bin": {
      "brain-games": "dist/bin/brain-games.js"
    },
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/fiorsaoirse/project-lvl1-s352.git"
   },
-  "author": "",
+  "author": "Maria Solovyanova",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fiorsaoirse/project-lvl1-s352/issues"
