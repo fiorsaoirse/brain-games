@@ -9,6 +9,7 @@ const isEvenNumber = num => (num % 2 === 0 ? 'yes' : 'no');
 
 const gameStart = () => {
   const userName = sayHi();
+  console.log('Answer "yes" if number even otherwise answer "no".\n');
   const maxCounts = 3;
   const iter = (answersCount) => {
     if (answersCount > maxCounts) {
