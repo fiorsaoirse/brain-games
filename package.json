@@ -1,11 +1,11 @@
 {
   "name": "fiorsaoirse-brain-games-project",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "brain games hexlet project",
   "main": "",
   "bin": {
-    "brain-games": "src/bin/brain-games.js",
-    "brain-even": "src/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-games.js"
   },
   "files": [
     "dist"
@@ -25,7 +25,7 @@
     "url": "https://github.com/fiorsaoirse/project-lvl1-s352/issues"
   },
   "homepage": "https://github.com/fiorsaoirse/project-lvl1-s352#readme",
-  "keywords": "hexlet-project",
+  "keywords": "hexlet-project, brain-games, fiorsaoirse",
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
@@ -37,6 +37,7 @@
     "eslint": "^5.6.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "fiorsaoirse-brain-games-project": "^1.0.5",
     "readline-sync": "^1.4.9"
   }
 }
