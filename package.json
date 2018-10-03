@@ -25,7 +25,11 @@
     "url": "https://github.com/fiorsaoirse/project-lvl1-s352/issues"
   },
   "homepage": "https://github.com/fiorsaoirse/project-lvl1-s352#readme",
-  "keywords": "hexlet-project, brain-games, fiorsaoirse",
+  "keywords": [ 
+    "hexlet-project",
+    "brain-games",
+    "fiorsaoirse"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
