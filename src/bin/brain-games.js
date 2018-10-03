@@ -3,4 +3,3 @@
 import sayHi from '..';
 
 sayHi();
-

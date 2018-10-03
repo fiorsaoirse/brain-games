@@ -3,4 +3,4 @@ start:
 publish:
 	npm publish
 lint:
-	npx eslint src/
+	npx eslint .
