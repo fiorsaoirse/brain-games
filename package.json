@@ -4,7 +4,8 @@
   "description": "brain games hexlet project",
   "main": "",
   "bin": {
-    "brain-games": "src/bin/brain-games.js"
+    "brain-games": "src/bin/brain-games.js",
+    "brain-even": "src/bin/brain-games.js"
   },
   "files": [
     "dist"

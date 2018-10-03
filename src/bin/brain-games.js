@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
 import sayHi from '..';
+import gameStart from './../game.js';
 
-sayHi();
+const user = sayHi();
+gameStart(user);
