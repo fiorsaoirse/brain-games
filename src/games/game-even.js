@@ -1,32 +1,31 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
-import sayHi from '..';
+import { cons } from 'hexlet-pairs';
+import sayHi from '../engine';
+
+const description = 'Answer "yes" if number even otherwise answer "no".';
+const countOfQuestion = 3;
 
 const generateNum = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-const isEvenNumber = num => (num % 2 === 0 ? 'yes' : 'no');
+const isEvenNumber = num => num % 2 === 0;
 
 const gameStart = () => {
-  const userName = sayHi();
-  console.log('Answer "yes" if number even otherwise answer "no".\n');
-  const maxCounts = 3;
-  const iter = (answersCount) => {
-    if (answersCount > maxCounts) {
-      return console.log(`Congratulations, ${userName}!`);
+  const iter = (currentQuestion, arrayOfPairs) => {
+    if (currentQuestion > countOfQuestion) {
+      return arrayOfPairs;
     }
-    const question = generateNum(1, 20); // Вернем случайное число от 1 до 20
-    console.log(`Question: ${question}`);
-    const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
-    const rightAnswer = isEvenNumber(question);
-    if (rightAnswer === userAnswer) {
-      console.log('Correct!');
-      const newCount = answersCount + 1;
-      return iter(newCount);
-    }
-    return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`);
+
+    // Вернем случайное число от 1 до 20
+    const question = generateNum(1, 20);
+    const rightAnswer = isEvenNumber(question) === true ? 'yes' : 'no';
+    const currentPair = cons(question, rightAnswer);
+    const newCount = currentQuestion + 1;
+    arrayOfPairs.push(currentPair);
+    return iter(newCount, arrayOfPairs);
   };
-  iter(1);
+  const arrayOfQuestionsAnswers = iter(1, []);
+  sayHi(description, arrayOfQuestionsAnswers);
 };
 
 export default gameStart;
