@@ -21,7 +21,7 @@ const generateGameData = () => {
   const progression = generateProgression(firstNumber, step);
 
   // Получаем случайный индекс из массива, элемент с этим индексом "спрячем"
-  const hiddenElemIndex = generateNum(0, progression.length - 1);
+  const hiddenElemIndex = generateNum(0, progression.length);
   const rightAnswer = progression[hiddenElemIndex];
 
   // "Прячем" элемент

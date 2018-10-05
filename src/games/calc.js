@@ -23,7 +23,7 @@ const generateGameData = () => {
   const secondNmber = generateNum(1, 100);
 
   // Выбор случайного элемента из массива операндов
-  const operand = arrayOfOpernads[generateNum(0, arrayOfOpernads.length - 1)];
+  const operand = arrayOfOpernads[generateNum(0, arrayOfOpernads.length)];
   const question = `${firstNumber} ${operand} ${secondNmber}`;
   const rightAnswer = calculateExpression(firstNumber, operand, secondNmber);
   return cons(question, rightAnswer);
