@@ -10,3 +10,6 @@ brain-calc:
 
 brain-progresson:
 <a href="https://asciinema.org/a/o8wJCzMtYzmQGoCzGIlJs0ROu" target="_blank"><img src="https://asciinema.org/a/o8wJCzMtYzmQGoCzGIlJs0ROu.png" /></a>
+
+brain-prime:
+<a href="https://asciinema.org/a/tGQnVTC3bpM16VLBffrSHbHa0" target="_blank"><img src="https://asciinema.org/a/tGQnVTC3bpM16VLBffrSHbHa0.png" /></a>
