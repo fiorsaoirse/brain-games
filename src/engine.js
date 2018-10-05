@@ -5,7 +5,7 @@ import { car, cdr } from 'hexlet-pairs';
 
 const countOfTries = 3;
 
-const sayHi = (descripton, generator) => {
+const engineStart = (descripton, generator) => {
   console.log('\nWelcome to the Brain Games!');
   console.log(descripton);
 
@@ -34,4 +34,4 @@ const sayHi = (descripton, generator) => {
   return iter(1);
 };
 
-export default sayHi;
+export default engineStart;

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { cons } from 'hexlet-pairs';
-import sayHi from '../engine';
+import engineStart from '../engine';
 import generateNum from '../generatorNum';
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -13,17 +13,12 @@ const findGCD = (firstNumber, secondNumber) => {
   return findGCD(secondNumber, firstNumber % secondNumber);
 };
 
-const generatePair = () => {
+const generateGameData = () => {
   const firstNumber = generateNum(1, 100);
   const secondNmber = generateNum(1, 100);
   const question = `${firstNumber} ${secondNmber}`;
   const rightAnswer = findGCD(firstNumber, secondNmber);
-  const pair = cons(question, rightAnswer);
-  return pair;
+  return cons(question, rightAnswer);
 };
 
-const gameStart = () => {
-  sayHi(description, generatePair);
-};
-
-export default gameStart;
+export default () => engineStart(description, generateGameData);
