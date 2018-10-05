@@ -27,9 +27,10 @@ const engineStart = (descripton, generator) => {
     if (rightAnswer === userAnswer) {
       console.log('Correct!');
       const newCount = answersCount + 1;
-      return iter(newCount);
+      iter(newCount);
+    } else {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`);
     }
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`);
   };
   return iter(1);
 };
