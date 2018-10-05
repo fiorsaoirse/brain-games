@@ -1,12 +1,10 @@
-#!/usr/bin/env node
-
 import { cons } from 'hexlet-pairs';
 import engineStart from '../engine';
-import generateNum from '../generatorNum';
+import generateNum from '../utils';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const sieve = (number) => {
+const isPrime = (number) => {
   const arraySieve = [];
   // 0 и 1 - не простые числа
   arraySieve[0] = 0;
@@ -27,7 +25,7 @@ const sieve = (number) => {
 
 const generateGameData = () => {
   const question = generateNum(1, 100);
-  const rightAnswer = sieve(question) ? 'yes' : 'no';
+  const rightAnswer = isPrime(question) ? 'yes' : 'no';
   return cons(question, rightAnswer);
 };
 

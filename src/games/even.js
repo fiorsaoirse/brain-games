@@ -1,8 +1,6 @@
-#!/usr/bin/env node
-
 import { cons } from 'hexlet-pairs';
 import engineStart from '../engine';
-import generateNum from '../generatorNum';
+import generateNum from '../utils';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 

@@ -1,16 +1,14 @@
-#!/usr/bin/env node
-
 import { cons } from 'hexlet-pairs';
 import engineStart from '../engine';
-import generateNum from '../generatorNum';
+import generateNum from '../utils';
 
 const description = 'What number is missing in this progression?';
 const countOfElements = 10;
 
 const generateProgression = (firstElem, step) => {
-  const arrayOfNumbers = [firstElem];
+  const arrayOfNumbers = [];
   for (let i = 0; i < countOfElements - 1; i += 1) {
-    const newElement = arrayOfNumbers[i] + step;
+    const newElement = firstElem + step * i;
     arrayOfNumbers.push(newElement);
   }
   return arrayOfNumbers;
@@ -23,7 +21,7 @@ const generateGameData = () => {
   const progression = generateProgression(firstNumber, step);
 
   // Получаем случайный индекс из массива, элемент с этим индексом "спрячем"
-  const hiddenElemIndex = Math.floor(Math.random() * progression.length);
+  const hiddenElemIndex = generateNum(0, progression.length - 1);
   const rightAnswer = progression[hiddenElemIndex];
 
   // "Прячем" элемент

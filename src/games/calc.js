@@ -1,22 +1,18 @@
-#!/usr/bin/env node
-
 import { cons } from 'hexlet-pairs';
 import engineStart from '../engine';
-import generateNum from '../generatorNum';
+import generateNum from '../utils';
 
 const description = 'What is the result of the expression?';
 const arrayOfOpernads = ['+', '-', '*'];
 
-const calculateExpression = (expression) => {
-  const arrayOfExpression = expression.split(' ');
-  const [firstNumber, operand, secondNumber] = arrayOfExpression;
+const calculateExpression = (firstNumber, operand, secondNumber) => {
   switch (operand) {
     case '+':
-      return Number(firstNumber) + Number(secondNumber);
+      return firstNumber + secondNumber;
     case '-':
-      return Number(firstNumber) - Number(secondNumber);
+      return firstNumber - secondNumber;
     case '*':
-      return Number(firstNumber) * Number(secondNumber);
+      return firstNumber * secondNumber;
     default:
       return 'There is no such operand';
   }
@@ -27,9 +23,9 @@ const generateGameData = () => {
   const secondNmber = generateNum(1, 100);
 
   // Выбор случайного элемента из массива операндов
-  const operand = arrayOfOpernads[Math.floor(Math.random() * arrayOfOpernads.length)];
+  const operand = arrayOfOpernads[generateNum(0, arrayOfOpernads.length - 1)];
   const question = `${firstNumber} ${operand} ${secondNmber}`;
-  const rightAnswer = calculateExpression(question);
+  const rightAnswer = calculateExpression(firstNumber, operand, secondNmber);
   return cons(question, rightAnswer);
 };
 
