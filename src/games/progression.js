@@ -5,9 +5,9 @@ import generateNum from '../utils';
 const description = 'What number is missing in this progression?';
 const countOfElements = 10;
 
-const generateProgression = (firstElem, step, countOfElements) => {
+const generateProgression = (firstElem, step, elements) => {
   const arrayOfNumbers = [];
-  for (let i = 0; i < countOfElements - 1; i += 1) {
+  for (let i = 0; i < elements - 1; i += 1) {
     const newElement = firstElem + step * i;
     arrayOfNumbers.push(newElement);
   }
